@@ -9,6 +9,12 @@ class MinHeap:
         # bc we have trouble mapping children that start from index zero (index 1 is much easier to work with)
         self.heap = [0]  # Binary tree represented as a array
 
+    def isEmpty(self):
+        if self.size == 0:
+            return True
+        else:
+            False
+
     def popMin(self):
         if self.size == 0:
             return 
