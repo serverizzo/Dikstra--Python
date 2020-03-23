@@ -17,7 +17,21 @@ class graphNode2:
     def getWeight(self):
         return self.weight
 
+    def __gt__(self, other):
+        if other == math.inf:
+            return False
+        
+        if self.weight > other.weight:
+            return True
+        else:
+            return False
+
     def __lt__(self, other):
+        
+        # if we compare against infinity, other.weight would throw an error.
+        if other == math.inf:
+            return True
+
         if self.weight < other.weight:
             return True
         else:

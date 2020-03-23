@@ -7,21 +7,36 @@ class dikstra:
     def __init__(self):
         x = math.inf
         # edge list
+        # self.el = [
+        #     [x, 5, 8],
+        #     [x, x, 1],
+        #     [x, x, x]
+        # ]
+        # self.cost = [x, x, x]
+
         self.el = [
-            [x, 5, 8],
-            [x, x, 1],
-            [x, x, x]
+           # a   b   c   d   e   f   g (edge to go to letter)
+            [0,  4,  3,  x,  7,  x,  x], # a
+            [4,  0,  6,  5,  x,  x,  x], # b
+            [3,  6,  0,  11, 8,  x,  x], # c
+            [x,  5,  11, 0,  2,  2, 10], # d
+            [7,  x,  8,  2,  0,  x,  5], # e
+            [x,  x,  x,  2,  x,  0,  3], # f
+            [x,  x,  x,  10, 5,  3,  0]  # g
         ]
+        self.cost = [x, x, x, x, x, x, x]
 
         self.alreadyVisited = set()
         self.toVisit = MinHeap()
-        self.cost = [x, x, x]
+
+
+
 
     def solve(self, s):
 
         source = graphNode2()
-        source.setWeight(0)
-        source.setNum(s)
+        # source.setWeight(0)
+        source.setNum(0)
         # set the source to 0
         self.cost[s] = 0
         # add source to the places to visit
