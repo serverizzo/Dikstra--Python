@@ -12,16 +12,6 @@ class graphNode2:
     def getNum(self):
         return self.num
 
-    # I don't think we will need this
-    # def setPath(self, givenPath):
-    #     # copy given path
-    #     self.path = givenPath
-    #     # add yourself to the list  
-    #     self.path.append(self.getNum())
-
-    # def erasePath(self):
-    #     self.path = []
-
     def setWeight(self, x):
         self.weight = x
 
